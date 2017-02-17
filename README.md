@@ -4,6 +4,7 @@
 > ## WPROWADZENIE
 > ![](docs/CLI.PNG)
 > ![](docs/strukturaczystegoprojektu.png)
+> ![](docs/zaleznosci.png)
 
 
 # Dna
