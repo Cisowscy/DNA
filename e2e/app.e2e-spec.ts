@@ -1,7 +1,9 @@
 import { DNA4Page } from './app.po';
 
-describe('dna4 App', () => {
-  let page: DNA4Page;
+
+describe('dna App', () => {
+  let page: DnaPage;
+
 
   beforeEach(() => {
     page = new DNA4Page();
