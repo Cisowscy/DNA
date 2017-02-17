@@ -2,7 +2,7 @@
 
 
 > ## WPROWADZENIE
-> ![](docs/cli.png)
+> ![](docs/CLI.PNG)
 > ![](docs/strukturaczystegoprojektu.png)
 
 
