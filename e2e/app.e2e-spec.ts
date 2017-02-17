@@ -1,10 +1,10 @@
-import { DnaPage } from './app.po';
+import { DNA4Page } from './app.po';
 
-describe('dna App', function() {
-  let page: DnaPage;
+describe('dna4 App', () => {
+  let page: DNA4Page;
 
   beforeEach(() => {
-    page = new DnaPage();
+    page = new DNA4Page();
   });
 
   it('should display message saying app works', () => {
