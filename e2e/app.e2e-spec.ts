@@ -1,6 +1,6 @@
 import { DnaPage } from './app.po';
 
-describe('dna App', function() {
+describe('dna App', () => {
   let page: DnaPage;
 
   beforeEach(() => {
