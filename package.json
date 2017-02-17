@@ -1,6 +1,8 @@
 {
+
   "name": "dna",
   "version": "0.0.0-alpha.1",
+
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -10,6 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+
   "dependencies": {
     "@angular/common": "4.0.0.beta-7",
     "@angular/compiler": "4.0.0.beta-7",
@@ -33,12 +36,8 @@
     "@angular/compiler-cli": "4.0.0.beta-7",
     "@types/jasmine": "2.5.43",
     "@types/node": "~7.0.5",
-    "codelyzer": "~2.0.0-beta.4",
-    "jasmine-core": "~2.5.2",
-    "jasmine-spec-reporter": "~3.2.0",
-    "karma": "~1.4.1",
-    "karma-chrome-launcher": "~2.0.0",
-    "karma-cli": "~1.0.1",
+
+
     "karma-coverage-istanbul-reporter": "^0.2.3",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
@@ -46,5 +45,6 @@
     "ts-node": "~2.1.0",
     "tslint": "~4.4.2",
     "typescript": "~2.1.6"
+
   }
 }
