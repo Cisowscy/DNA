@@ -33,23 +33,17 @@ Generalnie chcę utworzyć niezależne środowisko genealogiczno-genetyczne.. al
 > Biblioteki: | [Google TypeScript Angular 4.0.0.beta-7](https://github.com/angular/angular/tree/4.0.0-beta.7) | [angular-material 2.0.0.beta-2](https://github.com/angular/material2/tree/2.0.0-beta.2) |
 >
 > Języki :  | [HTML (5.1/5.2)](https://www.w3.org/TR/html/)  |  [TypeScript (2.1.6)](https://www.typescriptlang.org/) | [SCSS (Sass 3.5)](http://sass-lang.com/) |
+>
+> KOMENDY: Angular CLI 1.0.0-beta.32.3 (szczegóły komend na dole strony)
+> ![](man/CLI.PNG)
 
-## KOMENDY: CLI 1.0.0-beta.32.3
-![](man/CLI.PNG)
-[^1] szczegóły na dole
-
-
-
-> ## WPROWADZENIE
-
+# STRUKTURA PROJEKTU
 > ![](man/strukturaczystegoprojektu.png)
-> ![](man/zaleznosci.png)
 
-# --------------
 
 
 -----
-## [^1]: KOMENDY CLI 1.0.0-beta.32.3
+## KOMENDY ANGULAR CLI 1.0.0-beta.32.3
 
 ### `ng xi18n <options...>` Extracts i18n messages from source code.
 

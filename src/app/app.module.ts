@@ -7,6 +7,7 @@ import { MaterialModule, OverlayContainer, FullscreenOverlayContainer} from '@an
 import {RouterModule} from '@angular/router';
 
 import { DNArootComponent, Wprowadzenie } from './app.component';
+import { MatchGenComponent } from './match-gen/match-gen.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { DNArootComponent, Wprowadzenie } from './app.component';
   ],
   declarations: [
     DNArootComponent,
-    Wprowadzenie
+    Wprowadzenie,
+    MatchGenComponent
   ],
   providers: [
     {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
