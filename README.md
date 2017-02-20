@@ -37,7 +37,7 @@ Generalnie chcę utworzyć niezależne środowisko genealogiczno-genetyczne.. al
 
 > ## Czego używam
 
-> Biblioteki: | [Google TypeScript Angular 4.0.0.beta-7](https://github.com/angular/angular/tree/4.0.0-beta.7) | [angular-material 2.0.0.beta-2](https://github.com/angular/material2/tree/2.0.0-beta.2) |
+> Biblioteki: | [Google TypeScript Angular 4.0.0.beta-8](https://github.com/angular/angular/tree/4.0.0-beta.7) | [angular-material 2.0.0.beta-2](https://github.com/angular/material2/tree/2.0.0-beta.2) |
 
 > Języki : | [HTML (5.1/5.2)](https://www.w3.org/TR/html/) | [TypeScript (2.1.6)](https://www.typescriptlang.org/) | [SCSS (Sass 3.5)](http://sass-lang.com/) |
 

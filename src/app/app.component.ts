@@ -9,7 +9,7 @@ import {Component, ViewEncapsulation, ElementRef} from '@angular/core';
         <md-card-title>hurra 1 krok za mna </md-card-title>
         <md-card-subtitle>Jest chowane Menu i działa tryb pełnoekranowy</md-card-subtitle>
       </md-card-header>
-      <img md-card-image src="assets/img/logo.png">
+      <!-- <img md-card-image src="assets/img/logo.png"> -->
       <md-card-content>
         <p>To jest moja pierwsza apka w Angular przy użyciu Google TypeScript Angular 4.0.7, w zasadzie niewiele wiem jeszcze ale będzie lepiej :)</p>
       </md-card-content>
