@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class DnaPage {
+export class Dna4Page {
   navigateTo() {
     return browser.get('/');
   }

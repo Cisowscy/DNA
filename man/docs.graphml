@@ -2632,7 +2632,7 @@ bootstrapModule(AppModule);<y:LabelModel>
                       <y:Fill color="#99CC00" transparent="false"/>
                       <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
                       <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="48.103515625" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="337.744140625" x="5.0" y="1.7482421874999545">AppComponent {
-  title = 'Genos-Ethnos-Logos (DNA) [https://Cisowscy.github.io/DNA/]';
+  title = 'Genos-Ethnos-Logos (DNA4) [https://Cisowscy.github.io/DNA4/]';
 }<y:LabelModel>
                           <y:SmartNodeLabelModel distance="4.0"/>
                         </y:LabelModel>

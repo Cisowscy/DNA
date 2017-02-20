@@ -1,5 +1,5 @@
 {
-  "name": "dna",
+  "name": "dna4",
   "version": "0.0.0-alpha.1",
   "license": "Apache-2.0",
   "angular-cli": {},
@@ -49,10 +49,10 @@
     "typescript": "~2.1.6"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.",
-  "repository": "git+https://github.com/Cisowscy/DNA.git",
+  "repository": "git+https://github.com/Cisowscy/DNA4.git",
   "author": "Jan Roman Cisowski",
   "bugs": {
-    "url": "https://github.com/Cisowscy/DNA/issues"
+    "url": "https://github.com/Cisowscy/DNA4/issues"
   },
-  "homepage": "https://cisowscy.github.io/DNA/"
+  "homepage": "https://cisowscy.github.io/DNA4/"
 }

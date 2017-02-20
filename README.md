@@ -1,61 +1,69 @@
-# DNA - Genos Ethnos Logos [https://cisowscy.github.io/DNA/]
+# DNA4 - Genos Ethnos Logos [<https://cisowscy.github.io/DNA4/>]
+
 ![](src/assets/img/logo.png)
 
 ## Development (co będzie potrzebne..)
--  [Node.js 7.5](https://nodejs.org/en/)
--  [Microsoft Visual Code](https://code.visualstudio.com/insiders) lub [Atom](https://atom.io/beta); przydatny może się okazać plugin do MSVscdoe [ngdoc](http://www.angulardoc.io)
--  [Chrome](https://www.google.pl/chrome/browser/canary.html) i plugin do debugowania Angulara [Augury](https://augury.angular.io/)
--  [yarn](https://yarnpkg.com/lang/en/)
--  [cmder](http://cmder.net/)
--  [git](https://git-scm.com/) oraz [SourceTree](https://www.sourcetreeapp.com/) i opcjonalnie [git flow](http://danielkummer.github.io/git-flow-cheatsheet/index.pl_PL.html)
+
+- [Node.js 7.5](https://nodejs.org/en/)
+- [Microsoft Visual Code](https://code.visualstudio.com/insiders) lub [Atom](https://atom.io/beta); przydatny może się okazać plugin do MSVscdoe [ngdoc](http://www.angulardoc.io)
+- [Chrome](https://www.google.pl/chrome/browser/canary.html) i plugin do debugowania Angulara [Augury](https://augury.angular.io/)
+- [yarn](https://yarnpkg.com/lang/en/)
+- [cmder](http://cmder.net/)
+- [git](https://git-scm.com/) oraz [SourceTree](https://www.sourcetreeapp.com/) i opcjonalnie [git flow](http://danielkummer.github.io/git-flow-cheatsheet/index.pl_PL.html)
 
 następnie
+
 ```bash
 $ npm i -g npm@latest
 $ npm i -g @angular/cli@latest
-$ git clone https://github.com/Cisowscy/DNA.git
-$ cd DNA
+$ git clone https://github.com/Cisowscy/DNA4.git
+$ cd DNA4
 $ yarn install
-$ start https:\\localhost:4200\
-$ ng serve 
+$ start http://localhost:4200/
+$ ng serve
 ```
-Opcjonalnie jeśli podczas kompilacji wystpi nadal!! [błąd `Error Could not resolve module opaque_token ` może być potrzebne dodatkowe doinstalowanie CLI lokalnie (npm link)](https://github.com/angular/angular-cli/issues/4611)
+
+Opcjonalnie jeśli podczas kompilacji wystpi nadal!! [błąd `Error Could not resolve module opaque_token` może być potrzebne dodatkowe doinstalowanie CLI lokalnie (npm link)](https://github.com/angular/angular-cli/issues/4611)
+
 ```bash
 $ npm i --save-dev @angular/cli@latest
 ```
+
 # co ja tu kodzę ;)
+
 Generalnie chcę utworzyć niezależne środowisko genealogiczno-genetyczne.. ale to kiedyś...
 
-**Doraźny cel:** utworzyć aplikację o dwojakim biegu ( generowanie przykładowej rodziny lub import z gedcom) do wizualizacji przepływu dna, i kożyści płynących z zbadania konkretnych przedstawicieli rodziny 
+**Doraźny cel:** utworzyć aplikację o dwojakim biegu ( generowanie przykładowej rodziny lub import z gedcom) do wizualizacji przepływu dna, i kożyści płynących z zbadania konkretnych przedstawicieli rodziny
 
 > ## Czego używam
->
+
 > Biblioteki: | [Google TypeScript Angular 4.0.0.beta-7](https://github.com/angular/angular/tree/4.0.0-beta.7) | [angular-material 2.0.0.beta-2](https://github.com/angular/material2/tree/2.0.0-beta.2) |
->
-> Języki :  | [HTML (5.1/5.2)](https://www.w3.org/TR/html/)  |  [TypeScript (2.1.6)](https://www.typescriptlang.org/) | [SCSS (Sass 3.5)](http://sass-lang.com/) |
->
-> KOMENDY: Angular CLI 1.0.0-beta.32.3 (szczegóły komend na dole strony)
-> ![](man/CLI.PNG)
+
+> Języki : | [HTML (5.1/5.2)](https://www.w3.org/TR/html/) | [TypeScript (2.1.6)](https://www.typescriptlang.org/) | [SCSS (Sass 3.5)](http://sass-lang.com/) |
+
+> KOMENDY: Angular CLI 1.0.0-beta.32.3 (szczegóły komend na dole strony) ![](man/CLI.PNG)
 
 # STRUKTURA PROJEKTU
+
 > ![](man/strukturaczystegoprojektu.png)
 
 # KOMPONENDIUM WIEDZY
-DOKUMENTACJIE:
-> - https://angular.io/docs/ts/latest/
->- https://material.angular.io/components/
-BLOGI:
-> - http://www.angulartypescript.com
-PROGRAMIKI:
-> - http://www.angulardoc.io
 
------
+DOKUMENTACJIE:
+
+> - <https://angular.io/docs/ts/latest/>
+> - <https://material.angular.io/components/> BLOGI:
+> - <http://www.angulartypescript.com> PROGRAMIKI:
+> - <http://www.angulardoc.io>
+
+--------------------------------------------------------------------------------
+
 ## KOMENDY ANGULAR CLI 1.0.0-beta.32.3
 
 ### `ng xi18n <options...>` Extracts i18n messages from source code.
 
-```bash  
-  --i18n-format (String) (Default: xlf)
+```bash
+--i18n-format (String) (Default: xlf)
     aliases: -f <value>, -xmb (--i18n-format=xmb), -xlf (--i18n-format=xlf), --xliff (--i18n-format=xlf), --i18nFormat <value>
   --output-path (Path) (Default: null)
     aliases: -op <value>, --outputPath <value>
@@ -65,17 +73,17 @@ PROGRAMIKI:
     aliases: --progress
 ```
 
-### `ng version <options...>`  outputs Angular CLI version aliases: `v`, `--version`, `-v`
+### `ng version <options...>` outputs Angular CLI version aliases: `v`, `--version`, `-v`
 
-```bash    
-  --verbose (Boolean) (Default: false)
+```bash
+--verbose (Boolean) (Default: false)
     aliases: --verbose
 ```
 
 ### `ng test <options...>` Runs your app's test suite. aliases: `t`
 
 ```bash
-    --watch (Boolean) (Default: true)
+--watch (Boolean) (Default: true)
     aliases: -w, --watch
   --code-coverage (Boolean) (Default: false)
     aliases: -cc, --codeCoverage
@@ -105,10 +113,10 @@ PROGRAMIKI:
 
 ### `ng set <options...>` Set a value in the configuration.`--global` (Boolean) (Default: false) aliases: `-g`, `--global`
 
-### `ng serve <options...>`  Builds and serves your app, rebuilding on file changes. aliases: `server`, `s`
+### `ng serve <options...>` Builds and serves your app, rebuilding on file changes. aliases: `server`, `s`
 
 ```bash
- --target (String) (Default: development)
+--target (String) (Default: development)
     aliases: -t <value>, -dev (--target=development), -prod (--target=production), --target <value>, --target <value>, --target <value>, --target <value>
   --environment (String)
     aliases: -e <value>, --environment <value>, --environment <value>, --environment <value>, --environment <value>
@@ -167,13 +175,13 @@ PROGRAMIKI:
   --live-reload-live-css (Boolean) (Default: true) Whether to live reload CSS (default true)
     aliases: --liveReloadLiveCss
   --hmr (Boolean) (Default: false) Enable hot module replacement
-    aliases: -hmr   
+    aliases: -hmr
 ```
 
 ### `ng new <options...>` Creates a new directory and a new Angular app.
 
 ```bash
-   --dry-run (Boolean) (Default: false)
+--dry-run (Boolean) (Default: false)
     aliases: -d, --dryRun
   --verbose (Boolean) (Default: false)
     aliases: -v, --verbose
@@ -202,18 +210,18 @@ PROGRAMIKI:
   --inline-style (Boolean) (Default: false)
     aliases: -is, --inlineStyle
   --inline-template (Boolean) (Default: false)
-    aliases: -it, --inlineTemplate 
+    aliases: -it, --inlineTemplate
 ```
 
-### `ng lint <options...>` Lints code in existing project  aliases: `l`
+### `ng lint <options...>` Lints code in existing project aliases: `l`
 
 ```bash
-   --fix (Boolean) (Default: false)
+--fix (Boolean) (Default: false)
     aliases: -fix
   --force (Boolean) (Default: false)
     aliases: --force
   --format (String) (Default: prose)
-    aliases: --format <value> 
+    aliases: --format <value>
 ```
 
 ### `ng get <options...>` Get a value from the configuration. `--global` (Boolean) (Default: false) aliases: `--global`
@@ -221,7 +229,7 @@ PROGRAMIKI:
 ### `ng generate <blueprint> <options...>` Generates new code from blueprints. aliases: `g`
 
 ```bash
-  --dry-run (Boolean) (Default: false)
+--dry-run (Boolean) (Default: false)
     aliases: -d, --dryRun
   --verbose (Boolean) (Default: false)
     aliases: -v, --verbose
@@ -232,13 +240,13 @@ PROGRAMIKI:
   --dummy (Boolean) (Default: false)
     aliases: -dum, -id, --dummy
   --in-repo-addon (String) (Default: null)
-    aliases: --in-repo <value>, -ir <value>, --inRepoAddon <value> 
+    aliases: --in-repo <value>, -ir <value>, --inRepoAddon <value>
 ```
 
 ### `ng eject <options...>` Ejects your app and output the proper webpack configuration and scripts.
 
 ```bash
-  --target (String) (Default: development)
+--target (String) (Default: development)
     aliases: -t <value>, -dev (--target=development), -prod (--target=production), --target <value>, --target <value>, --target <value>
   --environment (String)
     aliases: -e <value>, --environment <value>, --environment <value>, --environment <value>
@@ -273,13 +281,13 @@ PROGRAMIKI:
   --poll (Number) enable and define the file watching poll time period (milliseconds)
     aliases: -poll <value>, -poll <value>, -poll <value>
   --force (Boolean)
-    aliases: --force  
+    aliases: --force
 ```
 
 ### `ng e2e <options...>` Run e2e tests in existing project aliases: `e`
 
 ```bash
-     --target (String) (Default: development)
+--target (String) (Default: development)
     aliases: -t <value>, -dev (--target=development), -prod (--target=production), --target <value>, --target <value>
   --environment (String)
     aliases: -e <value>, --environment <value>, --environment <value>
@@ -337,24 +345,23 @@ PROGRAMIKI:
     aliases: -wu, --webdriverUpdate
   --serve (Boolean) (Default: true)
     aliases: -s, --serve
-
 ```
 
 ### `ng completion <options...>` Adds autocomplete functionality to `ng` commands and subcommands
 
 ```bash
- --all (Boolean) (Default: true)
+--all (Boolean) (Default: true)
     aliases: -a, -all
   --bash (Boolean) (Default: false)
     aliases: -b, -bash
   --zsh (Boolean) (Default: false)
-    aliases: -z, -zsh  
+    aliases: -z, -zsh
 ```
 
 ### `ng build <options...>` Builds your app and places it into the output path (dist/ by default). aliases: `b`
 
 ```bash
-  --target (String) (Default: development)
+--target (String) (Default: development)
     aliases: -t <value>, -dev (--target=development), -prod (--target=production), --target <value>
   --environment (String)
     aliases: -e <value>, --environment <value>
@@ -390,6 +397,6 @@ PROGRAMIKI:
     aliases: -poll <value>
   --stats-json (Boolean) (Default: false)
     aliases: --statsJson
-  
 ```
--------------------
+
+--------------------------------------------------------------------------------

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Wprowadzenie } from './app.component';
-/* 
+/*
 const routes: Routes = [
   {
     path: '',
@@ -15,9 +15,8 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class DNArootRoutesModule { } */
+export class DNA4rootRoutesModule { } */
 
-export const DNArootRoutesModule: Routes = [
-    {path: '', component: Wprowadzenie}
+export const DNA4rootRoutesModule: Routes = [
+  { path: '', component: Wprowadzenie }
 ];
-

@@ -17,5 +17,10 @@
     "typeRoots": [
       "../node_modules/@types"
     ]
-  }
+  },
+  "files": [
+    "./app/app.types.d.ts",
+    "./app/app.module.ts",   
+    "./main.ts"
+  ]
 }

@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DNArootRoutesModule } from './app-routing.module';
+import { DNA4rootRoutesModule } from './app-routing.module';
 import { MaterialModule, OverlayContainer, FullscreenOverlayContainer} from '@angular/material';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 
-import { DNArootComponent, Wprowadzenie } from './app.component';
+import { DNA4rootComponent, Wprowadzenie } from './app.component';
 import { MatchGenComponent } from './match-gen/match-gen.component';
 
 @NgModule({
@@ -14,24 +14,24 @@ import { MatchGenComponent } from './match-gen/match-gen.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(DNArootRoutesModule),
-    /*DNArootRoutesModule,*/
+    RouterModule.forRoot(DNA4rootRoutesModule),
+    /*DNA4rootRoutesModule,*/
     MaterialModule.forRoot(),
     ReactiveFormsModule
   ],
   declarations: [
-    DNArootComponent,
+    DNA4rootComponent,
     Wprowadzenie,
     MatchGenComponent
   ],
   providers: [
-    {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
+    { provide: OverlayContainer, useClass: FullscreenOverlayContainer }
   ],
-   entryComponents: [
-     DNArootComponent
+  entryComponents: [
+    DNA4rootComponent
   ],
-  bootstrap: [DNArootComponent]
+  bootstrap: [DNA4rootComponent]
 })
-export class DNArootModule { 
-   constructor(private _appRef: ApplicationRef) { }
+export class DNA4rootModule {
+  constructor(private _appRef: ApplicationRef) { }
 }
