@@ -1,4 +1,4 @@
-# DNA4 - Genos Ethnos Logos [<https://cisowscy.github.io/DNA4/>]
+# DNA4 - Genos Ethnos Logos [<https://cisowscy.github.io/DNA4/>] [![Build Status](https://travis-ci.org/Cisowscy/DNA4.svg?branch=master)](https://travis-ci.org/Cisowscy/DNA4)
 
 ![](src/assets/img/logo.png)
 
