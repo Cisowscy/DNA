@@ -40,7 +40,14 @@ Generalnie chcę utworzyć niezależne środowisko genealogiczno-genetyczne.. al
 # STRUKTURA PROJEKTU
 > ![](man/strukturaczystegoprojektu.png)
 
-
+# KOMPONENDIUM WIEDZY
+DOKUMENTACJIE:
+> - https://angular.io/docs/ts/latest/
+>- https://material.angular.io/components/
+BLOGI:
+> - http://www.angulartypescript.com
+PROGRAMIKI:
+> - http://www.angulardoc.io
 
 -----
 ## KOMENDY ANGULAR CLI 1.0.0-beta.32.3
