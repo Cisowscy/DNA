@@ -1,0 +1,34 @@
+.matchGen-zawartosc {
+   display: flex;
+  flex-flow: row wrap;
+.wynik {
+  .mat-card {
+    width: 450px;   
+  }
+}
+.parametry {
+  .mat-card {
+    width: 300px;    
+  }
+}
+  .mat-card {
+    width: 300px;
+    margin: 20px;   
+  }
+
+}
+.matchGen-tab-group {
+   border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+  .mat-tab-header {
+    background: #455A64;
+    .mat-tab-label{
+  width: 60px;
+}
+      
+  }
+  .mat-tab-body-content {
+    padding: 12px;    
+  }
+  
+}

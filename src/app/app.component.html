@@ -1,5 +1,5 @@
 <md-sidenav-container class="DNA4-root-okno" fullscreen >
-    <md-sidenav #start>
+    <md-sidenav #start  opened mode="side">
       <md-nav-list>
          <a *ngFor="let navItem of navItems"
          md-list-item
@@ -12,11 +12,14 @@
 
       <a md-list-item
          (click)="start.close()"
-         [routerLink]="['baseline']">
-        Baseline
+         [routerLink]="['']">
+       =7 START
       </a>
+       
+      
     </md-nav-list>
-    <button md-button (click)="start.close()">ZAMKNIJ</button>
+    <button md-button (click)="start.close()" class="mat-accent">ZAMKNIJ</button>
+    <a href="https://github.com/Cisowscy/DNA4" md-raised-button color="warn">GitHub</a>
   </md-sidenav>
 <div>
     <md-toolbar color="primary">
@@ -41,6 +44,3 @@
   </div>
 </md-sidenav-container>
 
-
-
-<router-outlet></router-outlet>

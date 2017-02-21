@@ -1,3 +1,48 @@
-<p>
-  match-gen works!
-</p>
+<div class="matchGen-zawartosc">
+
+  <div class="parametry">
+    <md-card>
+      <md-card-subtitle>GENEROWANIE PRZYKŁADOWEJ RODZINY</md-card-subtitle>
+      <md-card-title>PODAJ PARAMETRY</md-card-title>
+      <md-card-content>
+        <md-tab-group class="matchGen-tab-group" dynamicHeight [(selectedIndex)]="activeTabIndex">
+          <md-tab color="primary" label="ilość pokoleń">
+            <form> 
+              <h3>Na wstępie odrzućmy na moment, powszechne zjawisko ubytku przodków, i zastanówmy się dla ilu ichże pokoleń chcemy
+              uzyskać rezultat.</h3>
+              <table width="100%">
+                <tr>
+                <td>
+                  <md-input-container dividerColor="accent">
+                  <input mdInput type="number"
+               #characterCountInputHintExample
+               placeholder="podaj ilość pokoleń"
+               maxLength="2"
+               value="2">
+               <md-hint align="end">{{characterCountInputHintExample.value.length}} / 2</md-hint>
+                </md-input-container>
+                </td>
+                <td> </td>
+                </tr>
+              </table>              
+            </form>
+            <p></p>
+          </md-tab>
+          <md-tab label="ilość rodzeństwa">tttttttttt66666666ttttttt</md-tab>
+          <md-tab label="ubytek przodków">yyyyyyyyyyyyyy</md-tab>
+        </md-tab-group>
+      </md-card-content>
+      <md-card-footer>
+        <md-progress-bar mode="indeterminate"></md-progress-bar>
+      </md-card-footer>
+    </md-card>
+  </div>
+  <div class="wynik">
+    <md-card>
+      <div><key-up4></key-up4></div>
+    </md-card>
+
+  </div>
+</div>
+
+
