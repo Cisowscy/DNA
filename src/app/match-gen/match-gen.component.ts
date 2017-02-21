@@ -34,5 +34,5 @@ export class MatchGenComponent implements OnInit {
 })
 export class KeyUpComponent_v4 {
   value = '';
-  update(value: string) { this.value = value; }
+  update(value: string) { this.value = value; } 
 }

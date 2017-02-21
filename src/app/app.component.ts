@@ -35,14 +35,30 @@ export class DNA4rootComponent {
 
   toggleFullscreen() {
     let elem = this._element.nativeElement.querySelector('.DNA4-root-okno');
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullScreen) {
-      elem.webkitRequestFullScreen();
-    } else if (elem.mozRequestFullScreen) {
-      elem.mozRequestFullScreen();
-    } else if (elem.msRequestFullScreen) {
-      elem.msRequestFullScreen();
+    /*if (elem.fullscreenElement && 
+    elem.mozFullScreenElement && 
+    elem.webkitFullscreenElement && 
+    elem.msFullscreenElement) {*/
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullScreen) {
+        elem.webkitRequestFullScreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.msRequestFullScreen) {
+        elem.msRequestFullScreen();
+      }
+    /*} else {
+      if (elem.exitFullscreen) {
+        elem.exitFullscreen();
+      } else if (elem.msExitFullscreen) {
+        elem.msExitFullscreen();
+      } else if (elem.mozCancelFullScreen) {
+        elem.mozCancelFullScreen();
+      } else if (elem.webkitExitFullscreen) {
+        elem.webkitExitFullscreen();
+      }
+    } */
     }
   }
-}
+
