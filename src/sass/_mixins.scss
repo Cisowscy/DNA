@@ -1,0 +1,63 @@
+@mixin flexbox100h200w() {
+  .flexbox-grand-parent {
+   // background: rgba(212, 212, 212, 0.7);
+    width: 200%; //100vw
+    height: 100%; //100vh
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align items in Main Axis */
+    align-items: stretch;
+    /* align items in Cross Axis */
+    align-content: stretch;
+    /* Extra space in Cross Axis */
+  }
+}
+
+@mixin flexbox100h100w() {
+  .flexbox-parent {
+   // background: rgba(212, 212, 212, 0.7);
+    width: 100%; //100vw
+    height: 100%; //100vh
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align items in Main Axis */
+    align-items: stretch;
+    /* align items in Cross Axis */
+    align-content: stretch;
+    /* Extra space in Cross Axis */
+  }
+  .flexbox-item {
+    padding: 0.1rem;
+  }
+  .flexbox-item-grow {
+    flex: 1;
+    /* same as flex: 1 1 auto; */
+  }
+  .flexbox-item.header {
+   // background: rgba(28, 122, 199, 0.726);
+  }
+  .flexbox-item.content {
+   // background: rgba(27, 155, 54, 0.74);
+  }
+  .flexbox-item.footer {
+   // background: rgba(126, 67, 12, 0.781);
+  }
+  .fill-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align items in Main Axis */
+    align-items: stretch;
+    /* align items in Cross Axis */
+    align-content: stretch;
+    /* Extra space in Cross Axis */
+  }
+  .fill-area-content {
+   // background: rgba(0, 0, 0, 0.26); //
+   //border: 1px solid #ffffff;
+    /* Needed for when the area gets squished too far and there is content that can't be displayed */
+    overflow: auto;
+  }
+}

@@ -1,21 +1,71 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+      <mat-toolbar class="NazwaAPKi flexbox-item header">
+          <span style="color: rgb(0, 138, 202); font-size: 1.4rem;">D</span>
+          <span style="color: rgb(220, 37, 226); font-size: 1.2rem;">N</span>
+          <span style="color: rgb(197, 162, 5); font-size: 1.1rem;">A</span>
+          <span style="color: rgb(238, 238, 238); font-size: 1rem;">4</span>
+          <span style="color: rgb(30, 150, 0); font-size: 1.1rem;">G</span>
+          <span style="color: rgb(30, 150, 0); font-size: 1.2rem;">E</span>
+          <span style="color: rgb(30, 150, 0); font-size: 1.4rem;">N</span>
+          <span class="example-spacer"></span>
+          <button mat-icon-button [matMenuTriggerFor]="languageMENU">
+             <mat-icon>language</mat-icon>
+          </button>
+          <mat-menu #languageMENU="matMenu">
+              <button mat-menu-item>
+                <span class="flag-icon rozmiarFlagi flag-icon-pl"></span>
+                <span>  Polski</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-ua"></span>
+                <span>  Український</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-cz"></span>
+                <span>  Čeština</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-hu"></span>
+                  <span>  Magyar</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-il"></span>
+                  <span>  ייִדיש</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-at"></span>
+                  <span>  Deutsch</span>
+              </button>
+              <button mat-menu-item>
+                  <span class="flag-icon rozmiarFlagi flag-icon-us"></span>
+                  <span>  English</span>
+              </button>
+            </mat-menu>
+      </mat-toolbar>
+      <div class="flexbox-item fill-area content flexbox-item-grow">
+          <nav class="fill-area-content flexbox-item-grow">
+              Content
+              <br /><br />
+              Emulates height 100% with a horizontal flexbox with stretch
+              <br /><br />
+              This box with a border should fill the blue area except for the padding (just to show the middle flexbox item).
+          </nav>
+      </div>
+      <mat-toolbar class="NazwaAPKi flexbox-item footer">
+          <span style="color: rgb(238, 238, 238); font-size: 0.5rem;">J.R.Cisowski</span>
+          <span class="example-spacer"></span>
+          <span style="color: rgb(238, 238, 238); font-size: 0.5rem;">4GEN@Cisowscy.com</span>
+      </mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content class="flexbox-item fill-area content flexbox-item-grow  background-dna">
+      <main class="fill-area-content flexbox-item-grow">
+          Content
+          <router-outlet></router-outlet>
+          <br /><br />
+          Emulates height 100% with a horizontal flexbox with stretch
+          <br /><br />
+          This box with a border should fill the blue area except for the padding (just to show the middle flexbox item).
+      </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
