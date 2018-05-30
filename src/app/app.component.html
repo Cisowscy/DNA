@@ -1,6 +1,6 @@
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened>
-      <mat-toolbar class="NazwaAPKi flexbox-item header">
+      <mat-toolbar>
           <span style="color: rgb(0, 138, 202); font-size: 1.4rem;">D</span>
           <span style="color: rgb(220, 37, 226); font-size: 1.2rem;">N</span>
           <span style="color: rgb(197, 162, 5); font-size: 1.1rem;">A</span>
@@ -8,58 +8,49 @@
           <span style="color: rgb(30, 150, 0); font-size: 1.1rem;">G</span>
           <span style="color: rgb(30, 150, 0); font-size: 1.2rem;">E</span>
           <span style="color: rgb(30, 150, 0); font-size: 1.4rem;">N</span>
-          <span class="example-spacer"></span>
+          <span class="kl-dystans"></span>
           <button mat-icon-button [matMenuTriggerFor]="languageMENU">
              <mat-icon>language</mat-icon>
           </button>
           <mat-menu #languageMENU="matMenu">
               <button mat-menu-item>
-                <span class="flag-icon rozmiarFlagi flag-icon-pl"></span>
+                <span class="flag-icon kl-size-Flags flag-icon-pl"></span>
                 <span>  Polski</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-ua"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-ua"></span>
                 <span>  Український</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-cz"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-cz"></span>
                 <span>  Čeština</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-hu"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-hu"></span>
                   <span>  Magyar</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-il"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-il"></span>
                   <span>  ייִדיש</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-at"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-at"></span>
                   <span>  Deutsch</span>
               </button>
               <button mat-menu-item>
-                  <span class="flag-icon rozmiarFlagi flag-icon-us"></span>
+                  <span class="flag-icon kl-size-Flags flag-icon-us"></span>
                   <span>  English</span>
               </button>
             </mat-menu>
       </mat-toolbar>
-      <div class="flexbox-item fill-area content flexbox-item-grow">
-          <nav class="fill-area-content flexbox-item-grow">
-              Content
-              <br /><br />
-              Emulates height 100% with a horizontal flexbox with stretch
-              <br /><br />
-              This box with a border should fill the blue area except for the padding (just to show the middle flexbox item).
-          </nav>
-      </div>
-      <mat-toolbar class="NazwaAPKi flexbox-item footer">
-          <span style="color: rgb(238, 238, 238); font-size: 0.5rem;">J.R.Cisowski</span>
-          <span class="example-spacer"></span>
-          <span style="color: rgb(238, 238, 238); font-size: 0.5rem;">4GEN@Cisowscy.com</span>
-      </mat-toolbar>
+      <mat-tab-group headerPosition="below">
+          <mat-tab label="DNA"><DNA-nav-C-genetyka></DNA-nav-C-genetyka></mat-tab>
+          <mat-tab label="GEN"><DNA-nav-C-genealogia></DNA-nav-C-genealogia></mat-tab>
+          <mat-tab label="???"><DNA-nav-C-niewiedza></DNA-nav-C-niewiedza></mat-tab>
+        </mat-tab-group>
   </mat-sidenav>
-  <mat-sidenav-content class="flexbox-item fill-area content flexbox-item-grow  background-dna">
-      <main class="fill-area-content flexbox-item-grow">
+  <mat-sidenav-content>
+      <main>
           Content
           <router-outlet></router-outlet>
           <br /><br />

@@ -1,15 +1,34 @@
 @import '~@angular/material/theming';
-@mixin obrazekTMP() {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@mixin FlexBox-parent($W, $H) {
+  width:$W;
+  height: $H;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-start; /* align items in Main Axis */
+  align-items: stretch; /* align items in Cross Axis */
+  align-content: stretch; /* Extra space in Cross Axis */
 }
-@mixin obrazekFIX($adres, $typ) {
-  background: $adres $typ center center fixed;
-  @include obrazekTMP();
+@mixin FlexBox-item($P) {
+  padding: $P;
 }
-.background-dna {
+@mixin FlexBox-item-grow() {
+    flex: 1; /* same as flex: 1 1 auto; */
+}
+@mixin FlexBox-fill-area() {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+}
+@mixin FlexBox-fill-area-content($S) {
+    /* Needed for when the area gets squished too far and there is content that can't be displayed */
+    overflow: $S;
+}
+@mixin BackGroundFoto(){
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,159 +38,47 @@
   background-position: left 6.5rem center;
   background-attachment: fixed;
 }
-mat-sidenav-container {
-  width: 100%;
-  height: 100%;
+//--------------
 
-  display: flex;
-  flex-direction: column;
-
-  justify-content: flex-start; /* align items in Main Axis */
-  align-items: stretch; /* align items in Cross Axis */
-  align-content: stretch; /* Extra space in Cross Axis */
+mat-sidenav, mat-toolbar {
+  @include mat-elevation(7);
+}
+mat-sidenav-container{
+  @include FlexBox-parent(100%, 100%);
 }
 mat-sidenav {
-  @include mat-elevation(7);
-  width:10rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* align items in Main Axis */
-  align-items: stretch; /* align items in Cross Axis */
-  align-content: stretch; /* Extra space in Cross Axis */
-}
-.NazwaAPKi {
+  @include FlexBox-parent(10rem, 100%);
   @include mat-elevation(7);
 }
-mat-sidenav-content {
-  //border: 3px solid greenyellow;
+mat-toolbar, mat-sidenav-content {
+  @include FlexBox-item(8px);
 }
-.example-icon {
-  padding: 0 14px;
+mat-tab-group, mat-sidenav-content {
+  @include FlexBox-fill-area();
+  @include FlexBox-item-grow();
 }
+ main {
+  @include FlexBox-fill-area-content(auto);
+  @include FlexBox-item-grow();
+}
+mat-sidenav-content{
+  @include BackGroundFoto();
+}
+::ng-deep .mat-tab-body-wrapper {
+  @include FlexBox-fill-area-content(hidden);
+  @include FlexBox-item-grow();
+}
+//------------------
 
-.example-spacer {
-  flex: 1 1 auto;
-}
-.rozmiarFlagi {
+span.kl-size-Flags {
   font-size: 1rem
 }
-//-------------------------------------------------------------
-
-.flexbox-item
-{
-    padding: 8px;
+span.kl-dystans {
+  flex: 1 1 auto;
 }
-.flexbox-item-grow
-{
-    flex: 1; /* same as flex: 1 1 auto; */
-}
-
-.flexbox-item.header
-{
-    //background: rgba(255, 0, 0, .1);
-}
-.flexbox-item.footer
-{
-    //background: rgba(0, 255, 0, .1);
-}
-.flexbox-item.content
-{
-    //background: rgba(0, 0, 255, .1);
-}
-
-.fill-area
-{
-    display: flex;
-    flex-direction: row;
-
-    justify-content: flex-start; /* align items in Main Axis */
-    align-items: stretch; /* align items in Cross Axis */
-    align-content: stretch; /* Extra space in Cross Axis */
-
-}
-.fill-area-content
-{
-    //background: rgba(0, 0, 0, .3);
-    //border: 1px solid #000000;
-
-    /* Needed for when the area gets squished too far and there is content that can't be displayed */
-    overflow: auto;
-}
-//main {
-//  @include obrazekFIX(url(../../assets/images/BACKGROUND.png), no-repeat);
-//}
+//-------------------
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.flexbox-parent {
-   background: rgba(212, 212, 212, 0.7);
-   width: 100%; //100vw
-   height: 100%; //100vh
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   // align items in Main Axis
-   align-items: stretch;
-   // align items in Cross Axis
-   align-content: stretch;
-   // Extra space in Cross Axis
- }
- .flexbox-item {
-   padding: 0.1rem;
- }
- .flexbox-item-grow {
-   flex: 1;
-   // same as flex: 1 1 auto;
- }
- .flexbox-item.header {
-   //
-   background: rgba(28, 122, 199, 0.726);
- }
- .flexbox-item.content {
-   //
-   background: rgba(27, 155, 54, 0.74);
- }
- .flexbox-item.footer {
-   //
-   background: rgba(126, 67, 12, 0.781);
- }
- .fill-area {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-start;
-   // align items in Main Axis
-   align-items: stretch;
-   // align items in Cross Axis
-   align-content: stretch;
-   // Extra space in Cross Axis
- }
- .fill-area-content {
-   background: rgba(0, 0, 0, 0.26);
-  border: 1px solid #ffffff;
-   // Needed for when the area gets squished too far and there is content that can't be displayed
-   overflow: auto;
- }
-  */

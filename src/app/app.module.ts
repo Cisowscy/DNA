@@ -8,8 +8,11 @@ import { environment } from '../environments/environment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClarityModule } from '@clr/angular';
+import {TranslateModule} from '@ngx-translate/core';
 
 import { AppMaterialsModule } from './app.materials.module';
+
+import { FelietonyModule } from './felietony/felietony.module';
 
 @NgModule({
   declarations: [
@@ -21,8 +24,10 @@ import { AppMaterialsModule } from './app.materials.module';
     AppMaterialsModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     NgbModule.forRoot(),
+    TranslateModule.forRoot(),
     BrowserAnimationsModule,
-    ClarityModule
+    ClarityModule,
+    FelietonyModule
   ],
   providers: [],
   bootstrap: [AppComponent]

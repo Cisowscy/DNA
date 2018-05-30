@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'DNA-root',
+  selector: 'DNA-C-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
