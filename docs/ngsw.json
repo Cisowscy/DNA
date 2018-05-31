@@ -9,11 +9,11 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.9072f85d9cf72b885668.js",
-        "/polyfills.9926c8db02c4ae3ee015.js",
-        "/runtime.a66f828dca56eeb90e02.js",
+        "/main.60671f669699b1ab52a7.js",
+        "/polyfills.f30937feeb209c8e7db1.js",
+        "/runtime.6afe30102d8fe7337431.js",
         "/scripts.b9457e00367c5c383442.js",
-        "/styles.a8c08b2b3cc76b4ef641.css"
+        "/styles.be2fd17d1e6e43eca140.css"
       ],
       "patterns": []
     },
@@ -22,6 +22,14 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
+        "/assets/i18n/ces.json",
+        "/assets/i18n/deu.json",
+        "/assets/i18n/eng.json",
+        "/assets/i18n/hun.json",
+        "/assets/i18n/lit.json",
+        "/assets/i18n/pol.json",
+        "/assets/i18n/ukr.json",
+        "/assets/i18n/yid.json",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
         "/assets/icons/icon-152x152.png",
@@ -38,6 +46,14 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/i18n/ces.json": "5ab7b5c3a864c5ee44b95437d1dc829572f2cfb7",
+    "/assets/i18n/deu.json": "ecfd494e78728105f22f45462bdd6e4672b260a7",
+    "/assets/i18n/eng.json": "9f9e5ce0eef7c6a764594d1ade428fc2a8fb579e",
+    "/assets/i18n/hun.json": "6262e1be6a45480db090b08ec5c4f2cce514eaa9",
+    "/assets/i18n/lit.json": "391de8d67dd6652a94001af7306b6605a2411057",
+    "/assets/i18n/pol.json": "f541aebc0c6dabbfb1cc5ae1e7f5911aefec4cf3",
+    "/assets/i18n/ukr.json": "128e344090d0f0b0a6258d91cfbfc13dce5bbef7",
+    "/assets/i18n/yid.json": "df16f39ab350391144d51146e81ef046fec038af",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -49,12 +65,12 @@
     "/assets/images/BACKGROUND.png": "cc1c1c9df6365b3897eec7afc5b33ca40245b9c5",
     "/assets/images/avatar.jpg": "b423999f2dc603443d2343de85c53f5622231186",
     "/favicon.ico": "3220b5712f03071c715c2110649d3f86011cb77c",
-    "/index.html": "ec0e071181725adecd9047ea99250bb2e52d4442",
-    "/main.9072f85d9cf72b885668.js": "ffe4294997a262c048a9757161b830d4262b95e8",
-    "/polyfills.9926c8db02c4ae3ee015.js": "2f42da22fe0380a8ab7b34e4f489147175771000",
-    "/runtime.a66f828dca56eeb90e02.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
-    "/scripts.b9457e00367c5c383442.js": "c19dbda065970049ac5b48b7433be9c52f552964",
-    "/styles.a8c08b2b3cc76b4ef641.css": "7617a161d0b92fd91c0a8692669c8dcd00208617"
+    "/index.html": "529125fc0112eadd512aa15b117f98a14ceb4149",
+    "/main.60671f669699b1ab52a7.js": "a22bbd42744196a97a3dc93dbae3d30d2d271fa7",
+    "/polyfills.f30937feeb209c8e7db1.js": "06c7158d8b2ed73e035ea447e70b0ac681071811",
+    "/runtime.6afe30102d8fe7337431.js": "cda95194d03baeddcee9a629e56925e21631afa8",
+    "/scripts.b9457e00367c5c383442.js": "1af0d5e9fc8aa1a7d1f5f6e019eb20cd88c5bfe8",
+    "/styles.be2fd17d1e6e43eca140.css": "650631417d732df2a9455f20641cef32f2ee8923"
   },
   "navigationUrls": [
     {

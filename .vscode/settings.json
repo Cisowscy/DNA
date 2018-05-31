@@ -1,0 +1,18 @@
+{
+  "files.maxMemoryForLargeFilesMB": 6096,
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "workbench.colorTheme": "Ayu Mirage",
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+  "gitlens.advanced.messages": {
+      "suppressShowKeyBindingsNotice": true
+  },
+  "editor.renderIndentGuides": false,
+  "gitlens.defaultDateStyle": "absolute",
+  "workbench.iconTheme": "material-icon-theme",
+  "[plaintext]": {},
+  "wallaby.node": "C:\\Program Files\\nodejs",
+  "vsicons.projectDetection.autoReload": true,
+  "gitlens.historyExplorer.enabled": true,
+  "editor.largeFileOptimizations": false
+}

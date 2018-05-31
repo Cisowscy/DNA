@@ -32,11 +32,11 @@
                 "input": "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
               },
               "src/sass/styles.scss",
+              "node_modules/@clr/ui/clr-ui.min.css",
+              "node_modules/@clr/icons/clr-icons.min.css",
               {
                 "input": "./node_modules/bootstrap/dist/css/bootstrap.css"
-              },
-              "node_modules/@clr/ui/clr-ui.min.css",
-              "node_modules/@clr/icons/clr-icons.min.css"
+              }
             ],
             "scripts": [
               {
@@ -56,7 +56,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
@@ -128,6 +128,11 @@
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "dna:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "dna:serve:production"
+            }
           }
         },
         "lint": {

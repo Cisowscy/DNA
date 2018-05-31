@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('DNA-C-root h1')).getText();
+    return element(by.css('DNA-root h1')).getText();
   }
 }

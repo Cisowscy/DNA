@@ -13,33 +13,37 @@
              <mat-icon>language</mat-icon>
           </button>
           <mat-menu #languageMENU="matMenu">
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('pol')">
                 <span class="flag-icon kl-size-Flags flag-icon-pl"></span>
-                <span>  Polski</span>
+                <span [translate]="'root.nav.language.pol'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('ukr')">
                   <span class="flag-icon kl-size-Flags flag-icon-ua"></span>
-                <span>  Український</span>
+                <span [translate]="'root.nav.language.ukr'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('ces')">
                   <span class="flag-icon kl-size-Flags flag-icon-cz"></span>
-                <span>  Čeština</span>
+                <span [translate]="'root.nav.language.ces'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('hun')">
                   <span class="flag-icon kl-size-Flags flag-icon-hu"></span>
-                  <span>  Magyar</span>
+                  <span [translate]="'root.nav.language.hun'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('lit')">
+                <span class="flag-icon kl-size-Flags flag-icon-lt"></span>
+                <span [translate]="'root.nav.language.lit'"></span>
+            </button>
+              <button mat-menu-item (click)="useLanguage('yid')" disabled>
                   <span class="flag-icon kl-size-Flags flag-icon-il"></span>
-                  <span>  ייִדיש</span>
+                  <span [translate]="'root.nav.language.yid'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('deu')">
                   <span class="flag-icon kl-size-Flags flag-icon-at"></span>
-                  <span>  Deutsch</span>
+                  <span [translate]="'root.nav.language.deu'"></span>
               </button>
-              <button mat-menu-item>
+              <button mat-menu-item (click)="useLanguage('eng')">
                   <span class="flag-icon kl-size-Flags flag-icon-us"></span>
-                  <span>  English</span>
+                  <span [translate]="'root.nav.language.eng'"></span>
               </button>
             </mat-menu>
       </mat-toolbar>
@@ -51,12 +55,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
       <main>
-          Content
           <router-outlet></router-outlet>
-          <br /><br />
-          Emulates height 100% with a horizontal flexbox with stretch
-          <br /><br />
-          This box with a border should fill the blue area except for the padding (just to show the middle flexbox item).
       </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
