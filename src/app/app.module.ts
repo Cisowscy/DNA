@@ -23,6 +23,9 @@ import { StartComponent } from './start.component';
 import { HTTP404Component } from './http404.component';
 import { FelietonyModule } from './felietony/felietony.module';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,14 +43,14 @@ import { FelietonyModule } from './felietony/felietony.module';
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient]
-      },
-      compiler: {
-          provide: TranslateCompiler,
-          useClass: TranslateMessageFormatCompiler
-      }
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      } // ,
+      // compiler: {
+      //     provide: TranslateCompiler,
+      //     useClass: TranslateMessageFormatCompiler
+      // }
     }),
     TranslateModule.forRoot(),
     FelietonyModule
@@ -57,7 +60,9 @@ import { FelietonyModule } from './felietony/felietony.module';
 })
 export class AppModule { }
 // required for AOT compilation
-export function HttpLoaderFactory(http: HttpClient) {
-      return new PruningTranslationLoader(http);
-//    return new TranslateHttpLoader(http);
-}
+// export function HttpLoaderFactory(http: HttpClient) {
+//     return new PruningTranslationLoader(http);
+//     return new TranslateHttpLoader(http);
+// }
+
+
