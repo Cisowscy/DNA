@@ -5,7 +5,7 @@
     "start": "ng serve",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build": "ng build --prod --base-href=https://Cisowscy.github.io/DNA/"
+    "build": "ng build --prod"
   },  
   "bugs": {
     "url": "https://github.com/Cisowscy/DNA/issues"
