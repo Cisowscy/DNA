@@ -1,61 +1,148 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
-      <mat-toolbar>
-          <span style="color: rgb(0, 138, 202); font-size: 1.4rem;">D</span>
-          <span style="color: rgb(220, 37, 226); font-size: 1.2rem;">N</span>
-          <span style="color: rgb(197, 162, 5); font-size: 1.1rem;">A</span>
-          <span style="color: rgb(238, 238, 238); font-size: 1rem;">4</span>
-          <span style="color: rgb(30, 150, 0); font-size: 1.1rem;">G</span>
-          <span style="color: rgb(30, 150, 0); font-size: 1.2rem;">E</span>
-          <span style="color: rgb(30, 150, 0); font-size: 1.4rem;">N</span>
-          <span class="kl-dystans"></span>
-          <button mat-icon-button [matMenuTriggerFor]="languageMENU">
-             <mat-icon>language</mat-icon>
-          </button>
-          <mat-menu #languageMENU="matMenu">
-              <button mat-menu-item (click)="useLanguage('pol')">
-                <span class="flag-icon kl-size-Flags flag-icon-pl"></span>
-                <span [translate]="'root.nav.language.pol'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('ukr')">
-                  <span class="flag-icon kl-size-Flags flag-icon-ua"></span>
-                <span [translate]="'root.nav.language.ukr'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('ces')">
-                  <span class="flag-icon kl-size-Flags flag-icon-cz"></span>
-                <span [translate]="'root.nav.language.ces'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('hun')">
-                  <span class="flag-icon kl-size-Flags flag-icon-hu"></span>
-                  <span [translate]="'root.nav.language.hun'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('lit')">
-                <span class="flag-icon kl-size-Flags flag-icon-lt"></span>
-                <span [translate]="'root.nav.language.lit'"></span>
-            </button>
-              <button mat-menu-item (click)="useLanguage('yid')" disabled>
-                  <span class="flag-icon kl-size-Flags flag-icon-il"></span>
-                  <span [translate]="'root.nav.language.yid'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('deu')">
-                  <span class="flag-icon kl-size-Flags flag-icon-at"></span>
-                  <span [translate]="'root.nav.language.deu'"></span>
-              </button>
-              <button mat-menu-item (click)="useLanguage('eng')">
-                  <span class="flag-icon kl-size-Flags flag-icon-us"></span>
-                  <span [translate]="'root.nav.language.eng'"></span>
-              </button>
-            </mat-menu>
-      </mat-toolbar>
-      <mat-tab-group headerPosition="below">
-          <mat-tab label="DNA"><DNA-nav-C-genetyka></DNA-nav-C-genetyka></mat-tab>
-          <mat-tab label="GEN"><DNA-nav-C-genealogia></DNA-nav-C-genealogia></mat-tab>
-          <mat-tab label="???"><DNA-nav-C-niewiedza></DNA-nav-C-niewiedza></mat-tab>
-        </mat-tab-group>
-  </mat-sidenav>
-  <mat-sidenav-content>
-      <main>
-          <router-outlet></router-outlet>
-      </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<main>
+  <mat-toolbar>
+    <span>
+      <h1 class="mat-display-1">Cisowscy.github.io/DNA/</h1>
+      <select #langSelect (change)="translate.use(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+      <h1 class="mat-display-1">/</h1>
+    </span>
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <mat-accordion>
+        <ng-container *ngFor="let poziomA of nawigacja">
+          <ng-container [ngSwitch]="poziomA.grupa">
+            <mat-expansion-panel *ngSwitchCase="true">
+              <mat-expansion-panel-header>
+                <mat-panel-title matTooltip="poziomA.opis" matTooltipPosition="after">
+                  {{ poziomA.nazwa }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-accordion>
+                <ng-container *ngFor="let poziomB of poziomA.elementy">
+                  <ng-container [ngSwitch]="poziomB.grupa">
+                    <mat-expansion-panel *ngSwitchCase="true">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title matTooltip="poziomB.opis" matTooltipPosition="after">
+                          {{ poziomB.nazwa }}
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-accordion>
+                        <ng-container *ngFor="let poziomC of poziomB.elementy">
+                          <ng-container [ngSwitch]="poziomC.grupa">
+                            <mat-expansion-panel *ngSwitchCase="true">
+                              <mat-expansion-panel-header>
+                                <mat-panel-title matTooltip="poziomC.opis" matTooltipPosition="after">
+                                  {{ poziomC.nazwa }}
+                                </mat-panel-title>
+                              </mat-expansion-panel-header>
+                              <mat-accordion>
+                                <ng-container *ngFor="let poziomD of poziomC.elementy">
+                                  <ng-container [ngSwitch]="poziomD.grupa">
+                                    <mat-expansion-panel *ngSwitchCase="true">
+                                      <mat-expansion-panel-header>
+                                        <mat-panel-title matTooltip="poziomD.opis" matTooltipPosition="after">
+                                          {{ poziomD.nazwa }}
+                                        </mat-panel-title>
+                                      </mat-expansion-panel-header>
+                                      <mat-list *ngFor="let poziomE of poziomD.elementy">
+                                        <mat-divider></mat-divider>
+                                        <mat-list-item matTooltip="poziomE.opis" matTooltipPosition="after">{{ poziomE.nazwa }}</mat-list-item>
+                                        <mat-divider></mat-divider>
+                                      </mat-list>
+                                    </mat-expansion-panel>
+                                    <mat-list *ngSwitchCase="false">
+                                      <mat-divider></mat-divider>
+                                      <mat-list-item matTooltip="poziomD.opis" matTooltipPosition="after">{{ poziomD.nazwa }}</mat-list-item>
+                                      <mat-divider></mat-divider>
+                                    </mat-list>
+                                  </ng-container>
+                                </ng-container>
+                              </mat-accordion>
+                            </mat-expansion-panel>
+                            <mat-list *ngSwitchCase="false">
+                              <mat-divider></mat-divider>
+                              <mat-list-item matTooltip="poziomC.opis" matTooltipPosition="after">{{ poziomC.nazwa }}</mat-list-item>
+                              <mat-divider></mat-divider>
+                            </mat-list>
+                          </ng-container>
+                        </ng-container>
+                      </mat-accordion>
+                    </mat-expansion-panel>
+                    <mat-list *ngSwitchCase="false">
+                      <mat-divider></mat-divider>
+                      <mat-list-item matTooltip="poziomB.opis" matTooltipPosition="after">{{ poziomB.nazwa }}</mat-list-item>
+                      <mat-divider></mat-divider>
+                    </mat-list>
+                  </ng-container>
+                </ng-container>
+              </mat-accordion>
+            </mat-expansion-panel>
+            <mat-list *ngSwitchCase="false">
+              <mat-divider></mat-divider>
+              <mat-list-item matTooltip="poziomA.opis" matTooltipPosition="after">{{ poziomA.nazwa }}</mat-list-item>
+              <mat-divider></mat-divider>
+            </mat-list>
+          </ng-container>
+        </ng-container>
+      </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!--<router-outlet></router-outlet>-->      
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+</main>
+<ng-container *ngIf="showInfo">
+<aside>
+    <mat-grid-list cols="5" rowHeight="50%">
+        <mat-grid-tile  colspan="3"></mat-grid-tile>
+        <mat-grid-tile  colspan="2"></mat-grid-tile>
+        <mat-grid-tile  colspan="3"></mat-grid-tile>
+        <mat-grid-tile colspan="2">
+            <mat-card>
+                <mat-tab-group>
+                    <mat-tab>
+                      <ng-template mat-tab-label>
+                          <div mat-card-avatar class="kl-avatar"></div> 
+                          <span class="mat-title">{{ 'info.projekt.p0title' | translate }}</span>
+                      </ng-template>
+                      <article>
+                          <p [translate]="'info.projekt.p1'" class="mat-body-2"></p>
+                          <p [translate]="'info.projekt.p2'" class="mat-body-2"></p>
+                          <p [translate]="'info.projekt.p3'" class="mat-body-2"></p>
+                          <p [translate]="'info.projekt.p4'" class="mat-body-2"></p>                          
+                          <p [translate]="'info.projekt.p6'" class="mat-body-2"></p>
+                          <a href="https://www.facebook.com/groups/GenealogiaGenetyczna/" target="_blank" mat-raised-button class="buttonFacebook">Facebook: GenealogiaGenetyczna</a>
+                          
+                      </article>
+                    </mat-tab>
+                    <mat-tab>
+                    <ng-template mat-tab-label>
+                        <div mat-card-avatar class="kl-avatar"></div> 
+                        <span class="mat-title">{{ 'info.autor.p0title' | translate }}</span>
+                    </ng-template>
+                    <article>
+                        <p [translate]="'info.autor.p1'" class="mat-body-2"></p>
+                        <p [translate]="'info.autor.p2a'" class="mat-body-2"></p>
+                        <a href="https://www.facebook.com/JanRomanCisowski" target="_blank" mat-raised-button class="buttonFacebook">Facebook: J.R.Cisowski</a>
+                                              
+                        <p [translate]="'info.autor.p2b'" class="mat-body-2"></p>
+                        <a href="mailto:4gen@Cisowscy.com?subject=Korespondencja_z_DNA_github_Cisowscy" target="_blank" mat-raised-button class="buttonMail">E-Mail: J.R.Cisowski</a>
+                        <p [translate]="'info.autor.p3'" class="mat-body-2"></p>
+                    </article>
+                  </mat-tab>
+                  </mat-tab-group>
+                <!--<mat-card-content>
+                    
+                  </mat-card-content>-->
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+</aside>
+</ng-container>
+<button mat-fab class="pokz-info" (click)="toggleInfo()">
+    <mat-icon aria-label="Example icon-button with a heart icon">info</mat-icon>
+</button>

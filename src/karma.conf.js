@@ -20,12 +20,29 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['mocha'],
+    mochaReporter: {
+      ignoreSkipped: true
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
+    customLaunchers: {
+      ChromeTravisCi: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     singleRun: false
-  });
+  };
+
+  if (process.env.TRAVIS){
+    config.browsers = [
+      'ChromeTravisCi'
+    ];
+  }
+
+  config.set(configuration);
 };

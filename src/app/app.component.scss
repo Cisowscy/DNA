@@ -1,84 +1,102 @@
 @import '~@angular/material/theming';
-@mixin FlexBox-parent($W, $H) {
-  width:$W;
-  height: $H;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: flex-start; /* align items in Main Axis */
-  align-items: stretch; /* align items in Cross Axis */
-  align-content: stretch; /* Extra space in Cross Axis */
+@import './src/sass/mixins';
+main{
+    @include Flex-Instancja(100%, 100%, column nowrap);
+    @include Flex-Uklad(flex-start, stretch, stretch);
+    @include Flex-Przewijak(hidden, hidden);
+    
 }
-@mixin FlexBox-item($P) {
-  padding: $P;
-}
-@mixin FlexBox-item-grow() {
-    flex: 1; /* same as flex: 1 1 auto; */
-}
-@mixin FlexBox-fill-area() {
-    display: flex;
-    flex-direction: row;
-
-    justify-content: flex-start; /* align items in Main Axis */
-    align-items: stretch; /* align items in Cross Axis */
-    align-content: stretch; /* Extra space in Cross Axis */
-}
-@mixin FlexBox-fill-area-content($S) {
-    /* Needed for when the area gets squished too far and there is content that can't be displayed */
-    overflow: $S;
-}
-@mixin BackGroundFoto(){
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-image: url(../assets/images/BACKGROUND.png);
-  background-repeat: no-repeat;
-  background-position: left 6.5rem center;
-  background-attachment: fixed;
-}
-//--------------
-
-mat-sidenav, mat-toolbar {
-  @include mat-elevation(7);
+mat-toolbar{
+    @include Flex-Instancja(auto, auto, row wrap);
+    @include Flex-Uklad(space-between, baseline, center);
+    @include mat-elevation(9);
+    span{
+        display: inline-flex;
+        
+    }
 }
 mat-sidenav-container{
-  @include FlexBox-parent(100%, 100%);
-}
-mat-sidenav {
-  @include FlexBox-parent(10rem, 100%);
-  @include mat-elevation(7);
-}
-mat-toolbar, mat-sidenav-content {
-  @include FlexBox-item(8px);
-}
-mat-tab-group, mat-sidenav-content {
-  @include FlexBox-fill-area();
-  @include FlexBox-item-grow();
-}
- main {
-  @include FlexBox-fill-area-content(auto);
-  @include FlexBox-item-grow();
-}
-mat-sidenav-content{
-  @include BackGroundFoto();
-}
-::ng-deep .mat-tab-body-wrapper {
-  @include FlexBox-fill-area-content(hidden);
-  @include FlexBox-item-grow();
-}
-//------------------
+    @include Flex-Element(1 1 auto, 0px);
+    @include Flex-Instancja(auto, auto, row nowrap);
+    @include Flex-Uklad(flex-start, stretch, stretch);
+    
+    mat-sidenav{
+        @include Flex-Instancja(11rem, 100%, column nowrap);
+        @include mat-elevation(9);
 
-span.kl-size-Flags {
-  font-size: 1rem
+       
+
+        
+
+    }
+    mat-sidenav-content{
+        @include Flex-Instancja(auto, auto, row nowrap);
+        @include Flex-Uklad(flex-start, stretch, stretch);
+        @include Flex-Element(1 1 auto, 0px);
+        @include ObrazekTla(cover, '../assets/images/BACKGROUND.png', 6.5rem);
+
+    }
+
 }
-span.kl-dystans {
-  flex: 1 1 auto;
+mat-expansion-panel-header:hover, mat-list-item:hover{
+    border: 0.1rem solid black;
+    border-radius: 0.3rem;
+    
 }
-//-------------------
+::ng-deep .parametersPanel .mat-expansion-panel-body {
+    padding-right: 0px;
+}
+aside {      
+    display: grid;
+    height: calc(100% - 1.4rem);
+    width: calc(100% - 11rem);
+    position: fixed;
+    top: 1.4rem;
+    left: 11rem;    
+    background-color: rgba(3, 17, 146, 0.15);
+    z-index: 100;    
+}
+mat-card {
+    @include mat-elevation(12);
+    margin-right: 0.7rem;
+    margin-bottom: 1.3rem;
+    
 
+    @include Flex-Instancja(100%, 100%, column nowrap);
+    @include Flex-Uklad(flex-start, stretch, stretch);
+    mat-tab-group{
+        margin: 0.4rem 0.1rem;
+        @include mat-elevation(12);
+        @include Flex-Instancja(flex-start, stretch, stretch);
+        
+    }
+}
+.kl-avatar {
+    background-image: url(../assets/images/avatar.jpg);
+    background-size: cover;
+}
+::ng-deep .mat-tab-body-wrapper {    
+    //border: 0.2rem solid green;
+    @include Flex-Przewijak(hidden, hidden);
+    @include Flex-Element(1 1 auto, 0.1rem);
+}
 
-
-
-
+::ng-deep .mat-tab-body-content{
+    @include Flex-Przewijak(hidden, hidden);    
+    padding: 0.1rem;
+    ///border: 0.2rem solid rgb(2, 0, 128);
+}
+.pokz-info{
+    z-index: 110;  
+    right: 0.1rem;
+    bottom: 0.1rem;
+    position: fixed !important;
+}
+a.buttonFacebook{
+        background-color: #3b5998;
+        color: #f7f7f7;   
+}
+a.buttonMail{
+    background-color: #971b13;
+    color: #f7f7f7;   
+}

@@ -9,11 +9,11 @@
       "urls": [
         "https://Cisowscy.github.io/DNA/favicon.ico",
         "https://Cisowscy.github.io/DNA/index.html",
-        "https://Cisowscy.github.io/DNA/main.588bb6600854cab2437d.js",
-        "https://Cisowscy.github.io/DNA/polyfills.f30937feeb209c8e7db1.js",
+        "https://Cisowscy.github.io/DNA/main.528be2cf33a6e7d4d48b.js",
+        "https://Cisowscy.github.io/DNA/polyfills.c8a0287269aa592ba11d.js",
         "https://Cisowscy.github.io/DNA/runtime.6afe30102d8fe7337431.js",
-        "https://Cisowscy.github.io/DNA/scripts.b9457e00367c5c383442.js",
-        "https://Cisowscy.github.io/DNA/styles.be2fd17d1e6e43eca140.css"
+        "https://Cisowscy.github.io/DNA/scripts.3bb11ebf81606a6d65fd.js",
+        "https://Cisowscy.github.io/DNA/styles.3f9aae80d0668dfff2c4.css"
       ],
       "patterns": []
     },
@@ -24,9 +24,12 @@
       "urls": [
         "https://Cisowscy.github.io/DNA/assets/i18n/ces.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/deu.json",
+        "https://Cisowscy.github.io/DNA/assets/i18n/en.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/eng.json",
+        "https://Cisowscy.github.io/DNA/assets/i18n/fr.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/hun.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/lit.json",
+        "https://Cisowscy.github.io/DNA/assets/i18n/pl.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/pol.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/ukr.json",
         "https://Cisowscy.github.io/DNA/assets/i18n/yid.json",
@@ -48,9 +51,12 @@
   "hashTable": {
     "https://Cisowscy.github.io/DNA/assets/i18n/ces.json": "5ab7b5c3a864c5ee44b95437d1dc829572f2cfb7",
     "https://Cisowscy.github.io/DNA/assets/i18n/deu.json": "ecfd494e78728105f22f45462bdd6e4672b260a7",
+    "https://Cisowscy.github.io/DNA/assets/i18n/en.json": "d4acfd8603f0b7619d202e0648b32559b8ddcbe5",
     "https://Cisowscy.github.io/DNA/assets/i18n/eng.json": "9f9e5ce0eef7c6a764594d1ade428fc2a8fb579e",
+    "https://Cisowscy.github.io/DNA/assets/i18n/fr.json": "eb65efd85623e74852d7dcb9b69195e4fc435784",
     "https://Cisowscy.github.io/DNA/assets/i18n/hun.json": "6262e1be6a45480db090b08ec5c4f2cce514eaa9",
     "https://Cisowscy.github.io/DNA/assets/i18n/lit.json": "391de8d67dd6652a94001af7306b6605a2411057",
+    "https://Cisowscy.github.io/DNA/assets/i18n/pl.json": "e1c4758e52ae5361bbb66188fd5210aa176b2b5f",
     "https://Cisowscy.github.io/DNA/assets/i18n/pol.json": "f541aebc0c6dabbfb1cc5ae1e7f5911aefec4cf3",
     "https://Cisowscy.github.io/DNA/assets/i18n/ukr.json": "128e344090d0f0b0a6258d91cfbfc13dce5bbef7",
     "https://Cisowscy.github.io/DNA/assets/i18n/yid.json": "df16f39ab350391144d51146e81ef046fec038af",
@@ -65,12 +71,12 @@
     "https://Cisowscy.github.io/DNA/assets/images/BACKGROUND.png": "cc1c1c9df6365b3897eec7afc5b33ca40245b9c5",
     "https://Cisowscy.github.io/DNA/assets/images/avatar.jpg": "b423999f2dc603443d2343de85c53f5622231186",
     "https://Cisowscy.github.io/DNA/favicon.ico": "3220b5712f03071c715c2110649d3f86011cb77c",
-    "https://Cisowscy.github.io/DNA/index.html": "ed8429f31d4fe74f5eb6120c05bfd5ce72bc7dbc",
-    "https://Cisowscy.github.io/DNA/main.588bb6600854cab2437d.js": "995e76000d914a9a61d970ff5a2d44b29960d13d",
-    "https://Cisowscy.github.io/DNA/polyfills.f30937feeb209c8e7db1.js": "06c7158d8b2ed73e035ea447e70b0ac681071811",
-    "https://Cisowscy.github.io/DNA/runtime.6afe30102d8fe7337431.js": "cda95194d03baeddcee9a629e56925e21631afa8",
-    "https://Cisowscy.github.io/DNA/scripts.b9457e00367c5c383442.js": "1af0d5e9fc8aa1a7d1f5f6e019eb20cd88c5bfe8",
-    "https://Cisowscy.github.io/DNA/styles.be2fd17d1e6e43eca140.css": "650631417d732df2a9455f20641cef32f2ee8923"
+    "https://Cisowscy.github.io/DNA/index.html": "bd7896088098c82b455059f3ce10efb341b04e5c",
+    "https://Cisowscy.github.io/DNA/main.528be2cf33a6e7d4d48b.js": "a7ab3d938a2080b6ecb4753f69f550404ff1ecc1",
+    "https://Cisowscy.github.io/DNA/polyfills.c8a0287269aa592ba11d.js": "2f42da22fe0380a8ab7b34e4f489147175771000",
+    "https://Cisowscy.github.io/DNA/runtime.6afe30102d8fe7337431.js": "078e320cc6fdaf355836c3b1c52b059cdd33fc7e",
+    "https://Cisowscy.github.io/DNA/scripts.3bb11ebf81606a6d65fd.js": "9ddf53b90dd77eed095a5e348302aeddef044daa",
+    "https://Cisowscy.github.io/DNA/styles.3f9aae80d0668dfff2c4.css": "39e7d8ceab651af5b4506d67258e51610b986b1e"
   },
   "navigationUrls": [
     {
