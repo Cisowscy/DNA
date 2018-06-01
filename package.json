@@ -6,7 +6,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "ng build --prod --base-href=https://Cisowscy.github.io/DNA/"
-  },
+  },  
+  "bugs": {
+    "url": "https://github.com/Cisowscy/DNA/issues"
+  },  
+  "description": "",
+  "author": "Jan Roman Cisowski",
   "repository": "git+https://github.com/Cisowscy/DNA.git",
   "private": true,
   "name": "dna",
@@ -37,7 +42,6 @@
     "@angular-devkit/build-ng-packagr": "~0.7.0-beta.1",
     "@angular-devkit/build-angular": "~0.7.0-beta.1"
   },
-  "description": "",
   "dependencies": {
     "zone.js": "^0.8.26",
     "rxjs-compat": "^6.2.0",
@@ -71,9 +75,5 @@
     "@angular/common": "^6.0.3",
     "@angular/cdk": "^6.2.0",
     "@angular/animations": "^6.0.3"
-  },
-  "bugs": {
-    "url": "https://github.com/Cisowscy/DNA/issues"
-  },
-  "author": "Jan Roman Cisowski"
+  }
 }
